@@ -1,8 +1,10 @@
 // import mongoose
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
+// get Schema constructor out of mongoose
+const { Schema } = mongoose;
 
+// create a schema for notes
 const NoteSchema = new Schema({
   title: {
     type: String,
@@ -17,4 +19,5 @@ const NoteSchema = new Schema({
 // create our model
 const Note = mongoose.model('note', NoteSchema);
 
-module.export = Note;
+// export our Note model
+module.exports = Note;

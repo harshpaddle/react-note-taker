@@ -16,6 +16,7 @@ const routes = require('./routes');
 app.use(routes);
 
 // set up mongoose connection
+// useNewUrlParser is something that mongoose requires --(boiler plate)
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost:27017/notetaker', { 
   useNewUrlParser: true
